@@ -1,0 +1,25 @@
+.doacoes-section {
+    text-align : center;
+    background-color: white;
+    margin-top: 125px;
+    margin-left: 50vh;
+    margin-right: 50vh;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: #063666;
+    text-decoration: none;
+}
+
+.doacao-body{
+   background-color: rgb(237, 238, 240);
+}
+
+#doacoes-container {
+    text-align: justify;
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 40px;
+    font-size: 20px;
+}

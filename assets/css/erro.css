@@ -1,0 +1,18 @@
+.w3-container,.w3-panel{padding:0.01em 16px;border-radius: 25px 25px 0px 0px;}
+.w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#024873!important}
+
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19); border-radius: 25px; width: 50%; height:50%; position:absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
+
+h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
+
+h1,h2,h3,h4,h5,h6,p{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
+hr{border:0;border-top:1px solid #eee;margin:20px 0}
+
+.center{ width: 50%; height:50%; position:absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
+body {
+    background-image: url('https://images.pexels.com/photos/866351/pexels-photo-866351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  
+}

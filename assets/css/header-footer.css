@@ -1,0 +1,241 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.disclaimer {
+    display: none;
+}
+
+/* Estilos do Header */
+.header {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #024873;
+    z-index: 999;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 8px 22px 0 rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+    max-width: 300px;
+    height: 60px;
+    padding-left: 70px;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+#menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 14px;
+    margin: 5px;
+}
+
+#menu ul {
+    padding: 20px;
+}
+
+#itens {
+    padding: 7px 12px;
+    transition: 0.5s;
+    opacity: 0.75;
+}
+
+#itens:hover {
+    border-width: thin;
+    border-bottom: 1px solid;
+    opacity: 1;
+}
+
+#login, #deslogar {
+    padding: 7px 19px;
+    background-color: rgb(0, 110, 255);
+    border-radius: 10px;
+    transition: 1s;
+}
+
+#login:hover, #deslogar:hover {
+    background-color: rgb(8, 37, 76);
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/* Dropdown */
+.mainmenubtn, .nome {
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 7px 19px;
+    border-radius: 10px;
+    transition: 0.2s;
+    position: absolute;
+    margin-top: -2px;
+}
+
+.mainmenubtn:hover, .nome:hover {
+    background-color: rgb(8, 37, 76);
+}
+
+.dropdown {
+    position: absolute;
+}
+
+.dropdown-child {
+    display: none;
+    background-color: rgb(0, 110, 255);
+    border-radius: 10px;
+    margin-left: 380px;
+}
+
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+    opacity: 0.5;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.dropdown-child a:hover {
+    background-color: #024873;
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+/* Modal */
+.caixa, .caixa-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    background: #024873;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.caixa.active, .caixa-2.active {
+    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, .8);
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+}
+
+.caixa::before, .caixa-2::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 40px;
+    height: 40px;
+    background: #024873;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.caixa.active::before, .caixa-2.active::before {
+    opacity: 1;
+}
+
+.caixa .conteudo, .caixa-2 .conteudo-2 {
+    min-width: 400px;
+    padding: 40px;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.caixa.active .conteudo, .caixa-2.active .conteudo-2 {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.8s;
+}
+
+.caixa .conteudo h2, .caixa-2 .conteudo-2 h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Helvetica;
+}
+
+/* Responsividade */
+@media (max-width: 670px) {
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #e7e7e7;
+        visibility: hidden;
+    }
+
+    #nav.active #menu {
+        visibility: visible;
+        background-color: #024873;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0.9;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        background: none;
+        cursor: pointer;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+        color: white;
+    }
+
+    #hamburger::before, #hamburger::after {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+    }
+}
